@@ -1,20 +1,20 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * main - Entry point
- * Description: prints '_putchar\n'
- * Return: Always 0 (success)
+ * main - entry point
+ * Description : prints -putchar t stdout
+ * Return: always zero
  */
 int main(void)
 {
-char str[] = "_putchar";
-int i = 0;
-
-while (str[i] != '\0')
-	{
-	char c = str[i];
-
-	_putchar(c);
-	i++;
-	}
-return (0);
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
+	putchar('\n');
+	return (0);
 }
