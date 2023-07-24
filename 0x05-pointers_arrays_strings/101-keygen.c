@@ -1,36 +1,33 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
+#define stopLimit 2645
+#define asciiStop 127
+#define asciiStart 32
 
-#define PASSWORD_LENGTH 8 // You can adjust this to your desired password length
+/**
+ * main - generates a random password
+ * Return: 0 if success
+ */
 
-// Function to generate a random character from the character set
-char generate_random_char() {
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    int index = rand() % (sizeof(charset) - 1);
-    return charset[index];
+int main(void)
+{
+	char password[100];
+	int randValue, num = 0, i = 0;
+
+	srand(time(NULL));
+
+	while (num < stopLimit)
+	{
+		randValue = random() % asciiStop;
+		if (randValue > asciiStart)
+		{
+			password[i++] = randValue;
+			num += randValue;
+		}
+	}
+	password[i++] = (2772 - num);
+	password[i] = '\0';
+	printf("%s", password);
+	return (0);
 }
-
-// Function to generate a random valid password for 101-crackme
-void generate_password() {
-    char password[PASSWORD_LENGTH + 1]; // +1 for null terminator
-
-    // Seed the random number generator with the current time
-    srand(time(NULL));
-
-    // Generate random characters for the password
-    for (int i = 0; i < PASSWORD_LENGTH; i++) {
-        password[i] = generate_random_char();
-    }
-
-    password[PASSWORD_LENGTH] = '\0'; // Null-terminate the password string
-
-    // Print the generated password
-    printf("Random valid password for 101-crackme: %s\n", password);
-}
-
-int main() {
-    generate_password();
-    return 0;
-}
-
