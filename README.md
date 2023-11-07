@@ -36,6 +36,6 @@ Hence, this repo will contain all the solutions I submit for our daily tasks.
 * There is **README.md** file at the root of the **alx-low_level_programming**
 
 ### Author
-####  *© MUTISO MULI *
+####  *© MutisoMuli*
 
 ![C-programming](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRij-OZjowrq8jTZjo96WIiGeL4BtPvro1IoA&usqp=CAU)
