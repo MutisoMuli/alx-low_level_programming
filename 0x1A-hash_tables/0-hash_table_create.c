@@ -29,7 +29,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(hash_table);
 		return (NULL);
 	}
-	
+
 	hash_table->size = size;
 
 	/* Initialize all hash node pointers to NULL */
