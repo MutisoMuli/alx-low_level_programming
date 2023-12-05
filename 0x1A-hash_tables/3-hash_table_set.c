@@ -2,18 +2,21 @@
 #include <string.h>
 
 /**
- * hash_table_set - Add or update an element in a hash table.
+ * hash_table_set - Add or update an element in a hash table
  * @ht: Hash table to add or update the key/value to
  * @key: Key to add (must not be an empty string)
  * @value: Value of the key (must be duplicated)
  *
- * Return: 1 if it successful, 0 otherwise
+ * Return: 1 if it succeeded, 0 otherwise
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *new_node, *current_node;
+
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 	current_node = ht->array[index];
@@ -49,17 +52,3 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	ht->array[index] = new_node;
 	return (1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
