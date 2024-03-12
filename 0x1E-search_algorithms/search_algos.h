@@ -23,4 +23,7 @@ typedef struct listint_s
 /* Prototype for 0-linear.c */
 int linear_search(int *array, size_t size, int value);
 
+/* Prototype for 1-binary.c */
+int binary_search(int *array, size_t size, int value);
+
 #endif /* SEARCH_ALGOS_H */
