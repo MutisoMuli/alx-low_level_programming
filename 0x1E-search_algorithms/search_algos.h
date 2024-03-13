@@ -47,4 +47,19 @@ int binary_search(int *array, size_t size, int value);
 /* Prototype for 100-jump.c */
 int jump_search(int *array, size_t size, int value);
 
+/* Prototype for 102-interpolation.c */
+int interpolation_search(int *array, size_t size, int value);
+
+/* Prototype for 103-exponential.c */
+int exponential_search(int *array, size_t size, int value);
+
+/* Prototype for 104-advanced_binary.c */
+int advanced_binary(int *array, size_t size, int value);
+
+/* Prototype for 105-jump_list.c */
+listint_t *jump_list(listint_t *list, size_t size, int value);
+
+/* Prototype for 106-linear_skip.c */
+skiplist_t *linear_skip(skiplist_t *list, int value);
+
 #endif /* SEARCH_ALGOS_H */
